@@ -3,16 +3,20 @@
 const TRANSLATIONS = {
   en: {
     /* ── Nav ─────────────────────────────── */
-    'nav.about':      'About Me',
-    'nav.belgrade':   'Belgrade',
-    'nav.berlin':     'Berlin',
-    'nav.london':     'London',
-    'nav.chisinau':   'Chișinău',
-    'nav.bucharest':  'Bucharest',
-    'nav.tiraspol':   'Tiraspol',
-    'nav.poland':     'Poland',
-    'nav.support':    'Support',
-    'nav.contact':    'Contact',
+    'nav.about':            'About Me',
+    'nav.belgrade':         'Belgrade',
+    'nav.berlin':           'Berlin',
+    'nav.london':           'London',
+    'nav.chisinau':         'Chișinău',
+    'nav.bucharest':        'Bucharest',
+    'nav.tiraspol':         'Transnistria',
+    'nav.poland':           'Poland',
+    'nav.support':          'Support',
+    'nav.contact':          'Contact',
+    'nav.region.western':   'Western Europe',
+    'nav.region.balkans':   'Balkans',
+    'nav.region.central':   'Central Europe',
+    'nav.region.eastern':   'Eastern Europe',
 
     /* ── Back links ──────────────────────── */
     'back.belgrade':  '← Belgrade Buildings',
@@ -20,7 +24,7 @@ const TRANSLATIONS = {
     'back.london':    '← London Buildings',
     'back.chisinau':  '← Chișinău Buildings',
     'back.bucharest': '← Bucharest Buildings',
-    'back.tiraspol':  '← Tiraspol Sites',
+    'back.tiraspol':  '← Transnistria Sites',
     'back.poland':    '← Poland Sites',
 
     /* ── Section headings ────────────────── */
@@ -300,16 +304,20 @@ const TRANSLATIONS = {
   ══════════════════════════════════════════════════════════════ */
   zh: {
     /* ── Nav ─────────────────────────────── */
-    'nav.about':    '關於我',
-    'nav.belgrade': '貝爾格勒',
-    'nav.berlin':   '柏林',
-    'nav.london':   '倫敦',
-    'nav.chisinau': '基希訥烏',
-    'nav.bucharest':'布加勒斯特',
-    'nav.tiraspol': '蒂拉斯波爾',
-    'nav.poland':   '波蘭',
-    'nav.support':  '支持',
-    'nav.contact':  '聯絡',
+    'nav.about':          '關於我',
+    'nav.belgrade':       '貝爾格勒',
+    'nav.berlin':         '柏林',
+    'nav.london':         '倫敦',
+    'nav.chisinau':       '基希訥烏',
+    'nav.bucharest':      '布加勒斯特',
+    'nav.tiraspol':       '德涅斯特河沿岸',
+    'nav.poland':         '波蘭',
+    'nav.support':        '支持',
+    'nav.contact':        '聯絡',
+    'nav.region.western': '西歐',
+    'nav.region.balkans': '巴爾幹',
+    'nav.region.central': '中歐',
+    'nav.region.eastern': '東歐',
 
     /* ── Back links ──────────────────────── */
     'back.belgrade': '← 貝爾格勒建築',
@@ -317,7 +325,7 @@ const TRANSLATIONS = {
     'back.london':   '← 倫敦建築',
     'back.chisinau': '← 基希訥烏建築',
     'back.bucharest':'← 布加勒斯特建築',
-    'back.tiraspol': '← 蒂拉斯波爾地點',
+    'back.tiraspol': '← 德涅斯特河沿岸地點',
     'back.poland':   '← 波蘭地點',
 
     /* ── Section headings ────────────────── */
@@ -628,4 +636,38 @@ document.addEventListener('DOMContentLoaded', function() {
       a.addEventListener('click', function() { nav.classList.remove('open'); });
     });
   }
+
+  /* Dropdown click-to-open (desktop) */
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var dropdown = this.closest('.nav-dropdown');
+      var wasOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown').forEach(function(d) { d.classList.remove('open'); });
+      if (!wasOpen) dropdown.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.nav-dropdown').forEach(function(d) { d.classList.remove('open'); });
+  });
+
+  /* Auto-set active nav link based on current page */
+  (function() {
+    var path = window.location.pathname;
+    var file = path.split('/').pop() || 'index.html';
+    var dir  = path.split('/').slice(-2, -1)[0] || '';
+    var dirMap = {
+      'buildings': 'belgrade', 'berlin': 'berlin', 'london': 'london',
+      'chisinau': 'chisinau', 'bucharest': 'bucharest',
+      'tiraspol': 'tiraspol', 'poland': 'poland'
+    };
+    var cityFile = dirMap[dir] ? (dirMap[dir] + '.html') : null;
+    document.querySelectorAll('.site-nav a').forEach(function(a) {
+      var href = a.getAttribute('href') || '';
+      var linkFile = href.split('/').pop();
+      if (linkFile === file || (cityFile && linkFile === cityFile)) {
+        a.classList.add('active');
+      }
+    });
+  })();
 });
