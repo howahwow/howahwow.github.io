@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soviet War Memorial Tiergarten — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" class="active" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/berlin/soviet-memorial/img_6987.jpg" alt="Soviet War Memorial, Tiergarten" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Soviet War<br>Memorial</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1945</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Tiergarten, Berlin</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Soviet Classical</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.context">Context</p><p class="building-meta-value">WWII / Soviet Occupation</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">2</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="berlin.sovietmemorial.desc">
+  <p>The Soviet War Memorial in Tiergarten was built in 1945, within months of the end of the Second World War, by Soviet forces using marble salvaged from the demolished Reich Chancellery. The central figure — a Soviet soldier in bronze — stands on a curved colonnade of marble columns, flanked by two T-34 tanks that were among the first to enter Berlin. It is, literally, built from the ruins of the Nazi state using the tools of its destruction.</p>
+  <p>The memorial sits in what was West Berlin during the Cold War — an anomaly, a Soviet monument maintained by Soviet soldiers in the middle of Western territory. Red Army troops guarded it throughout the division of the city, a bizarre and tense arrangement that persisted until 1990. The site buries 2,500 Soviet soldiers. It is a monument built at the moment of complete Soviet military power, using materials stripped from the most powerful symbol of the regime they had just defeated. The political weight of its construction materials is inseparable from what it means.</p>
+</div>
+
+<a href="../berlin.html" class="back-link" data-i18n="back.berlin">← Berlin Locations</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">2 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>52.5145° N &nbsp; 13.3651° E</span>
+  <span>Soviet War Memorial &nbsp;·&nbsp; Tiergarten, Berlin</span>
+</footer>
+
+<script>
+const BASE = '../images-web/berlin/soviet-memorial/';
+const THUMB = '../images-thumb/berlin/soviet-memorial/';
+const PHOTOS = ["img_6987.jpg","img_6994.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = `<img src="${THUMB}${f}" alt="Soviet War Memorial photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

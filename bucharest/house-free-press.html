@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The House of the Free Press and Aripi Monument — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" class="active" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/bucharest/house-free-press/IMG_2429.jpg" alt="House of the Free Press and Aripi Monument" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">House of the Free Press &amp; Aripi Monument</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.architect">Architect</p><p class="building-meta-value">Horia Maicu (building)</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1956</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Press / Media Complex</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Piata Presei Libere, Bucharest</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Stalinist Architecture / Socialist Realism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">1</p></div>
+</div>
+<div class="building-description" data-i18n-html="bucharest.freepresshouse.desc">
+  <p>The House of the Free Press — Casa Presei Libere — is Bucharest's most prominent example of Stalinist architecture, a 22-storey tower built in 1956 that was modelled directly on the Stalinist skyscrapers of Moscow. Designed by architect Horia Maicu, it is the tallest of the seven major Soviet-style towers built in the cities of the Eastern bloc in the early 1950s at Stalin's behest, each one a monument to socialist modernity in the Soviet imperial idiom: Gothic spires, ornate masonry, and an imposing verticality intended to dominate the city skyline.</p>
+  <p>Standing in front of the building is the Aripi Monument — Wings — a contemporary sculpture by Ovidiu Maitec that creates a striking visual counterpoint to the building behind it: the Stalinist tower's monumental historicism faced by an abstract, open-form sculpture in polished steel. The square in front of the building, now called Piata Presei Libere — Press Freedom Square — carries a particular irony: named for freedom of the press in a country that now has one of the most raucous and politically compromised media landscapes in the European Union, beside a building that was originally constructed to house the organs of a press that was entirely controlled by the state.</p>
+</div>
+<a href="../bucharest.html" class="back-link" data-i18n="back.bucharest">← Bucharest Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">1 photo</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>44.4705° N &nbsp; 26.0791° E</span>
+  <span>House of the Free Press &nbsp;·&nbsp; Bucharest</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_2429.jpg"];
+const BASE = '../images-web/bucharest/house-free-press/';
+const THUMB = '../images-thumb/bucharest/house-free-press/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="House of the Free Press photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

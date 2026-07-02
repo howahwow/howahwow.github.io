@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexandra & Ainsworth Estate — BRUTALIST</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" class="active" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/london/bw/IMG_1175.jpg" alt="Alexandra & Ainsworth Estate" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Alexandra<br>& Ainsworth Estate</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.architect">Architect</p><p class="building-meta-value">Neave Brown</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1978</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Social Housing</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Camden</p></div>
+  <div class="building-meta-item"><p class="building-meta-label">Listed</p><p class="building-meta-value">Grade II*</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">10</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="london.alexandra.desc">
+  <p>The Alexandra Road Estate — also known as the Alexandra & Ainsworth Estate — is Neave Brown's masterpiece, a dense low-rise social housing scheme in Camden that contains 520 homes in two long terraces stepping down toward a park. Every dwelling has a private outdoor space, and the ground level is entirely pedestrianised. Brown's ambition was to create the density of a tower block without the isolation of vertical living.</p>
+  <p>The scheme is extraordinary in its consistency of detail: the same board-marked concrete throughout, the same section repeated and varied, the terraces stepping and bridging above the mainline railway that runs beneath them. Grade II* listed since 1993, it was recognised by the Stirling Prize committee in 2018 when Neave Brown received a special award for lifetime achievement. One of the great unbuilt cities of postwar British architecture.</p>
+</div>
+
+<a href="../london.html" class="back-link" data-i18n="back.london">← London Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">10 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>51.5432° N  0.1787° W</span>
+  <span>Alexandra & Ainsworth Estate &nbsp;·&nbsp; London</span>
+</footer>
+
+<script>
+const PHOTOS = ["IMG_1175.jpg","IMG_1178.jpg","IMG_1179.jpg","IMG_1184.jpg","IMG_1194.jpg","IMG_1197.jpg","IMG_1200.jpg","IMG_1201.jpg","IMG_1203.jpg","IMG_1207.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = `../images-web/london/full/${f}`;
+  d.innerHTML = `<img src="../images-thumb/london/thumb/${f}" alt="Alexandra & Ainsworth Estate photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eastern City Gates — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" class="active" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/bw/IMG_9688.jpg" alt="Eastern City Gates, Belgrade" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Eastern City Gates</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.architects">Architects</p><p class="building-meta-value">Mihajlo Mitrović</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1977</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Residential / Mixed-use</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Zvezdara, Belgrade</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Yugoslav Brutalism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">9</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="belgrade.eastern.desc">
+  <p>The Eastern City Gates (Istočna kapija Beograda) is a pair of residential skyscrapers flanking the E75 motorway as it enters Belgrade from the east — forming a literal gateway to the city. Designed by Mihajlo Mitrović and completed in 1977, the two towers rise 26 floors each, their facades articulated with a bold horizontal banding of concrete and glazing that creates a rhythmic texture visible from the highway.</p>
+  <p>The concept of the city gate — a monumental threshold marking the entry into urban territory — is as old as the city itself. What Mitrović understood was that the motorway was the new approach, the new processional route into Belgrade, and that architecture could still respond to that procession with ambition. The towers are both sign and symbol: they tell you that you have arrived somewhere that took its own presence seriously.</p>
+</div>
+
+<a href="../belgrade.html" class="back-link" data-i18n="back.belgrade">← Belgrade Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">9 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>44.8097° N &nbsp; 20.5283° E</span>
+  <span>Eastern City Gates &nbsp;·&nbsp; Belgrade</span>
+</footer>
+
+<script>
+const PHOTOS = ["IMG_9647.jpg","IMG_9654.jpg","IMG_9668.jpg","IMG_9677.jpg","IMG_9680.jpg","IMG_9681.jpg","IMG_9692.jpg","IMG_9693.jpg","IMG_9698.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = `../images-web/full/${f}`;
+  d.innerHTML = `<img src="../images-thumb/full/${f}" alt="Eastern City Gates photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

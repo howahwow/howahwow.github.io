@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wrocławski Manhattan — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" class="active" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/poland/wroclawski-manhattan/IMG_3468.JPG" alt="Wrocławski Manhattan" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">Wrocławski Manhattan</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.type">Type</p><p class="building-meta-value">Residential Complex</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Wroclaw, Poland</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">8</p></div>
+</div>
+<div class="building-description" data-i18n-html="poland.manhattan.desc">
+  <p>Wrocławski Manhattan — Wroclaw's Manhattan — is a cluster of tall residential tower blocks built in the 1970s on Świdnicka Street, one of the city's main thoroughfares. The nickname was given by locals who saw in the cluster of towers rising above the low historic fabric of the city a skyline that suggested, at least in silhouette, the towers of New York. The irony was not lost on the residents of a city in communist Poland: this was their Manhattan, built in prefabricated concrete panels under a system that officially regarded capitalism as the enemy.</p>
+  <p>The towers are a product of Wroclaw's postwar housing expansion — the same process of mass residential construction that filled cities across the communist bloc with panel housing from the 1960s onward. What distinguishes the Wroclaw Manhattan from typical panel housing estates is its location: instead of being placed in a peripheral new district, the towers were inserted into the historic centre, creating a juxtaposition of eras and scales that remains one of the most striking urban moments in the city. The towers have been partially renovated since 1989 but retain their essential character: a communist-era skyline that the city has made its own.</p>
+</div>
+<a href="../poland.html" class="back-link" data-i18n="back.poland">← Poland Sites</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">8 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>51.1069° N &nbsp; 17.0290° E</span>
+  <span>Wrocławski Manhattan &nbsp;·&nbsp; Wroclaw</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_3468.JPG","IMG_3471.JPG","IMG_3473.JPG","IMG_3488.JPG","IMG_3489.JPG","IMG_3491.JPG","IMG_3492.JPG","IMG_3495.JPG"];
+const BASE = '../images-web/poland/wroclawski-manhattan/';
+const THUMB = '../images-thumb/poland/wroclawski-manhattan/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="Wrocławski Manhattan photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

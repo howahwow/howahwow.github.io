@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berlin Wall — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" class="active" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/berlin/berlin-wall/img_6714.jpg" alt="Berlin Wall" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Berlin Wall</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label">Built</p><p class="building-meta-value">1961</p></div>
+  <div class="building-meta-item"><p class="building-meta-label">Fell</p><p class="building-meta-value">1989</p></div>
+  <div class="building-meta-item"><p class="building-meta-label">Length</p><p class="building-meta-value">155 km total</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.context">Context</p><p class="building-meta-value">Cold War Division</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">2</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="berlin.berlinwall.desc">
+  <p>The Berlin Wall was not architecture in any conventional sense but it was a built form that shaped the city more fundamentally than any building. Erected overnight on 12–13 August 1961 by East German forces on Soviet orders, the Wall sealed the border between East and West Berlin that had been haemorrhaging the DDR's population — more than 3.5 million East Germans had emigrated West through Berlin since 1949. The Wall stopped that.</p>
+  <p>What remained in 1989, when it fell, was a double wall with a death strip between — watchtowers, patrol roads, tripwires, anti-vehicle trenches. At least 140 people died attempting to cross. The sections that survive today are fragments of the outer wall, the side that faced West Berlin and was accessible for graffiti. The inner wall, which East Germans faced and could not touch, is almost entirely gone. The surviving concrete is architecture only in retrospect — material that now carries the entire weight of what the Cold War was.</p>
+</div>
+
+<a href="../berlin.html" class="back-link" data-i18n="back.berlin">← Berlin Locations</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">2 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>52.5162° N &nbsp; 13.3778° E</span>
+  <span>Berlin Wall &nbsp;·&nbsp; Berlin</span>
+</footer>
+
+<script>
+const BASE = '../images-web/berlin/berlin-wall/';
+const THUMB = '../images-thumb/berlin/berlin-wall/';
+const PHOTOS = ["img_6714.jpg","img_6718.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = `<img src="${THUMB}${f}" alt="Berlin Wall photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

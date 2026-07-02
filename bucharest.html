@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucharest — HWC Travel</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="bucharest.html" class="active" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="city-hero">
+  <img src="images-web/bucharest/palace-of-parliament/IMG_2351.JPG" alt="Palace of Parliament, Bucharest" loading="eager" style="filter:grayscale(1) brightness(0.5);">
+  <div class="city-hero-content">
+    <p class="city-hero-label" data-i18n="bucharest.hero.label">Romania · Ceausescu-Era Modernism</p>
+    <h1 class="city-hero-title">BUCHAREST</h1>
+    <p class="city-hero-sub" data-i18n="bucharest.hero.sub">Socialist Architecture · 1950–1989</p>
+  </div>
+</section>
+
+<div class="section-head">
+  <h2 data-i18n="section.buildings">Buildings</h2>
+  <span class="count">12 spots</span>
+</div>
+
+<div class="building-grid">
+
+  <a href="bucharest/palace-of-parliament.html" class="building-card">
+    <img src="images-thumb/bucharest/palace-of-parliament/IMG_2351.JPG" alt="Palace of Parliament" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">01</p>
+      <h3 class="building-card-title">Palace of Parliament</h3>
+      <p class="building-card-meta">1984–1997 · Anca Petrescu · Socialist Realism</p>
+    </div>
+  </a>
+
+  <a href="bucharest/grand-hotel.html" class="building-card">
+    <img src="images-thumb/bucharest/grand-hotel/IMG_2007.jpg" alt="Grand Hotel Bucharest" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">02</p>
+      <h3 class="building-card-title">Grand Hotel Bucharest</h3>
+      <p class="building-card-meta">1971 · Hariton &amp; Belea · International Modernism</p>
+    </div>
+  </a>
+
+  <a href="bucharest/tehnoimport.html" class="building-card">
+    <img src="images-thumb/bucharest/tehnoimport/IMG_1979.JPG" alt="TehnoImport" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">03</p>
+      <h3 class="building-card-title">TehnoImport</h3>
+      <p class="building-card-meta">1965 · Office · Socialist Modernism</p>
+    </div>
+  </a>
+
+  <a href="bucharest/house-free-press.html" class="building-card">
+    <img src="images-thumb/bucharest/house-free-press/IMG_2429.jpg" alt="House of the Free Press" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">04</p>
+      <h3 class="building-card-title">House of the Free Press &amp; Aripi Monument</h3>
+      <p class="building-card-meta">1956 · Horia Maicu · Stalinist Architecture</p>
+    </div>
+  </a>
+
+  <a href="bucharest/metropolitan-circus.html" class="building-card">
+    <img src="images-thumb/bucharest/metropolitan-circus/IMG_2300.JPG" alt="The Metropolitan Circus" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">05</p>
+      <h3 class="building-card-title">The Metropolitan Circus</h3>
+      <p class="building-card-meta">1960 · Circus · Socialist Modernism</p>
+    </div>
+  </a>
+
+  <a href="bucharest/arcul-de-triumf.html" class="building-card">
+    <img src="images-thumb/bucharest/arcul-de-triumf/IMG_2333.JPG" alt="Arcul de Triumf" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">06</p>
+      <h3 class="building-card-title">Arcul de Triumf</h3>
+      <p class="building-card-meta">1936 · Petre Antonescu · WWI Memorial</p>
+    </div>
+  </a>
+
+  <a href="bucharest/tomb-unknown-soldier.html" class="building-card">
+    <img src="images-thumb/bucharest/tomb-unknown-soldier/IMG_2401.JPG" alt="Tomb of the Unknown Soldier" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">07</p>
+      <h3 class="building-card-title">Tomb of the Unknown Soldier</h3>
+      <p class="building-card-meta">1923 / 1958 · Carol Park · WWI Memorial</p>
+    </div>
+  </a>
+
+  <a href="bucharest/memorial-of-rebirth.html" class="building-card">
+    <img src="images-thumb/bucharest/memorial-of-rebirth/IMG_2016.jpg" alt="Memorial of Rebirth" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">08</p>
+      <h3 class="building-card-title">Memorial of Rebirth</h3>
+      <p class="building-card-meta">2005 · Piata Revolutiei · 1989 Revolution</p>
+    </div>
+  </a>
+
+  <a href="bucharest/blocul-rotund.html" class="building-card">
+    <img src="images-thumb/bucharest/blocul-rotund/IMG_2366.JPG" alt="Blocul Rotund" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">09</p>
+      <h3 class="building-card-title">Blocul Rotund</h3>
+      <p class="building-card-meta">1970s–80s · Lujerului · Socialist Housing</p>
+    </div>
+  </a>
+
+  <a href="bucharest/politehnica-metro.html" class="building-card">
+    <img src="images-thumb/bucharest/politehnica-metro/IMG_2361.JPG" alt="Politehnica Underground Station" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">10</p>
+      <h3 class="building-card-title">Politehnica Underground Station</h3>
+      <p class="building-card-meta">1979 · Metro M1 · Soviet Metro Modernism</p>
+    </div>
+  </a>
+
+  <a href="bucharest/brutalist-slide.html" class="building-card">
+    <img src="images-thumb/bucharest/brutalist-slide/IMG_2309.JPG" alt="Brutalist Slide in Parcul Floreasca" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">11</p>
+      <h3 class="building-card-title">Brutalist Slide in Parcul Floreasca</h3>
+      <p class="building-card-meta">1970s–80s · Public Space · Brutalism</p>
+    </div>
+  </a>
+
+  <a href="bucharest/obor-district.html" class="building-card">
+    <img src="images-thumb/bucharest/obor-district/IMG_2422.JPG" alt="Obor District" loading="lazy">
+    <div class="building-card-content">
+      <p class="building-card-num">12</p>
+      <h3 class="building-card-title">Obor District</h3>
+      <p class="building-card-meta">1960s–80s · Urban District · Communist Housing</p>
+    </div>
+  </a>
+
+</div>
+
+<footer class="site-footer">
+  <span>44.4268° N &nbsp; 26.1025° E</span>
+  <span>Bucharest &nbsp;·&nbsp; Romania</span>
+</footer>
+
+<script src="src/i18n.js"></script>
+</body>
+</html>
+

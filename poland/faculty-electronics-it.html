@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty of Electronics &amp; IT — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" class="active" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/poland/faculty-electronics-it/IMG_3215.JPG" alt="Faculty of Electronics and IT, Warsaw University of Technology" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">Faculty of Electronics &amp; Information Technology</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">University Faculty Building</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Warsaw, Poland</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">4</p></div>
+</div>
+<div class="building-description" data-i18n-html="poland.facultyelectronics.desc">
+  <p>The Faculty of Electronics and Information Technology building at Warsaw University of Technology is one of the most distinctive examples of late communist-era Brutalism in Warsaw — a heavy, assertive structure whose exposed concrete surfaces and bold geometric massing make it immediately legible as a product of the architectural culture of the 1970s and 1980s. The Warsaw University of Technology campus accumulated several buildings in this idiom during that period, each asserting the importance of technical and scientific education in the late communist state.</p>
+  <p>The building's architecture belongs to the tradition of Polish Brutalism that was given considerable latitude during the Gierek era — a period in the 1970s when Poland borrowed heavily from the West and invested in a wave of prestige construction. University buildings, cultural centres, and public facilities built during this period often pushed architectural form further than their Soviet counterparts, reflecting the relative openness of Polish cultural policy. The faculty building carries the ambition of that moment in its structure: a building designed to declare that science and technology were the future, cast in a material that has now become irrevocably historical.</p>
+</div>
+<a href="../poland.html" class="back-link" data-i18n="back.poland">← Poland Sites</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">4 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>52.2214° N &nbsp; 21.0108° E</span>
+  <span>Faculty of Electronics &amp; IT &nbsp;·&nbsp; Warsaw</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_3215.JPG","IMG_3219.JPG","IMG_3222.JPG","IMG_3223.JPG"];
+const BASE = '../images-web/poland/faculty-electronics-it/';
+const THUMB = '../images-thumb/poland/faculty-electronics-it/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="Faculty of Electronics photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

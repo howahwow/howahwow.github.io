@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiraspol — HWC Travel</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" class="active" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="images-web/tiraspol/dom-sovetov/IMG_2667.JPG" alt="Lenin and Transnistrian Parliament, Tiraspol" loading="eager" style="filter:grayscale(1) brightness(0.5);">
+  <div class="hero-content">
+    <p class="hero-label" data-i18n="tiraspol.hero.label">Transnistria · The Last Soviet State</p>
+    <h1 class="hero-title">TIRASPOL</h1>
+    <p class="hero-sub" data-i18n="tiraspol.hero.sub">Soviet Architecture · Frozen in Time</p>
+  </div>
+  <p class="hero-scroll">Scroll ↓</p>
+</section>
+
+<div class="section-head">
+  <h2 data-i18n="section.buildings">Buildings</h2>
+  <span class="count">17 spots</span>
+</div>
+
+<div class="search-bar">
+  <input class="search-input" id="spot-search" type="text" placeholder="Search spots…" autocomplete="off">
+</div>
+
+<div class="buildings-grid">
+
+  <a href="tiraspol/dom-sovetov.html" class="building-card">
+    <img src="images-thumb/tiraspol/dom-sovetov/IMG_2667.JPG" alt="Dom Sovetov and Lenin Statue, Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">01 / 17</p>
+      <h2 class="building-card-name">Dom Sovetov</h2>
+      <p class="building-card-meta">4 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/tiraspol-cinema.html" class="building-card">
+    <img src="images-thumb/tiraspol/tiraspol-cinema/IMG_2654.JPG" alt="Cinema Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">02 / 17</p>
+      <h2 class="building-card-name">Cinema Tiraspol</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/war-memorial.html" class="building-card">
+    <img src="images-thumb/tiraspol/war-memorial/IMG_2835.JPG" alt="War Memorial, Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">03 / 17</p>
+      <h2 class="building-card-name">War Memorial</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/ussr-cantine.html" class="building-card">
+    <img src="images-thumb/tiraspol/ussr-cantine/IMG_2586.JPG" alt="USSR Cantine, Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">04 / 17</p>
+      <h2 class="building-card-name">USSR Cantine</h2>
+      <p class="building-card-meta">12 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/republics-palace.html" class="building-card">
+    <img src="images-thumb/tiraspol/republics-palace/IMG_2645.JPG" alt="Palace of the Republic, Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">05 / 17</p>
+      <h2 class="building-card-name">Palace of the Republic</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/pridnestrovian-government.html" class="building-card">
+    <img src="images-thumb/tiraspol/pridnestrovian-government/IMG_2668.JPG" alt="Pridnestrovian Government Building" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">06 / 17</p>
+      <h2 class="building-card-name">Pridnestrovian Government</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/suvorov-square.html" class="building-card">
+    <img src="images-thumb/tiraspol/suvorov-square/IMG_2662.JPG" alt="Suvorov Square, Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">07 / 17</p>
+      <h2 class="building-card-name">Suvorov Square</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/tiraspol-city-hall.html" class="building-card">
+    <img src="images-thumb/tiraspol/tiraspol-city-hall/IMG_2701.JPG" alt="Tiraspol City Hall" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">08 / 17</p>
+      <h2 class="building-card-name">Tiraspol City Hall</h2>
+      <p class="building-card-meta">4 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/gagarin-monument.html" class="building-card">
+    <img src="images-thumb/tiraspol/gagarin-monument/IMG_2722.JPG" alt="Gagarin Monument, Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">09 / 17</p>
+      <h2 class="building-card-name">Gagarin Monument</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/green-market.html" class="building-card">
+    <img src="images-thumb/tiraspol/green-market/IMG_2770.JPG" alt="Green Market, Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">10 / 17</p>
+      <h2 class="building-card-name">Green Market</h2>
+      <p class="building-card-meta">5 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/transdniestrian-university.html" class="building-card">
+    <img src="images-thumb/tiraspol/transdniestrian-university/IMG_2718.JPG" alt="Transdniestrian State University" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">11 / 17</p>
+      <h2 class="building-card-name">Transdniestrian State University</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/comsomol-park.html" class="building-card">
+    <img src="images-thumb/tiraspol/comsomol-park/IMG_2839.JPG" alt="Comsomol Park, Tiraspol" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">12 / 17</p>
+      <h2 class="building-card-name">Comsomol Park &amp; Lenin Monument</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/bender-fortress.html" class="building-card">
+    <img src="images-thumb/tiraspol/bender-fortress/IMG_2807.JPG" alt="Bender Fortress" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">13 / 17</p>
+      <h2 class="building-card-name">Bender Fortress</h2>
+      <p class="building-card-meta">4 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/bender-train-station.html" class="building-card">
+    <img src="images-thumb/tiraspol/bender-train-station/IMG_2826.JPG" alt="Bender Train Station" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">14 / 17</p>
+      <h2 class="building-card-name">Bender Train Station</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/monument-power-plant.html" class="building-card">
+    <img src="images-thumb/tiraspol/monument-power-plant/IMG_2742.JPG" alt="Monument at the Power Plant" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">15 / 17</p>
+      <h2 class="building-card-name">Monument at the Power Plant</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/residential-buildings.html" class="building-card">
+    <img src="images-thumb/tiraspol/residential-buildings/IMG_2636.JPG" alt="Soviet Residential Buildings" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">16 / 17</p>
+      <h2 class="building-card-name">Soviet Residential Buildings</h2>
+      <p class="building-card-meta">9 photos</p>
+    </div>
+  </a>
+
+  <a href="tiraspol/lenin-street-guesthouse.html" class="building-card">
+    <img src="images-thumb/tiraspol/lenin-street-guesthouse/IMG_2626.JPG" alt="Lenin Street Guesthouse" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">17 / 17</p>
+      <h2 class="building-card-name">Lenin Street Guesthouse</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+</div>
+
+<footer class="site-footer">
+  <span>46.8403° N &nbsp; 29.6433° E</span>
+  <span>HWC Travel &nbsp;·&nbsp; Dicky Chan</span>
+  <span>
+    <a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--mid);margin-right:1rem;">IG @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--mid);">TT @howahc_</a>
+  </span>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var inp = document.getElementById('spot-search');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.toLowerCase();
+    document.querySelectorAll('.building-card').forEach(function(card) {
+      var name = card.querySelector('.building-card-name');
+      card.style.display = (!q || (name && name.textContent.toLowerCase().indexOf(q) !== -1)) ? '' : 'none';
+    });
+  });
+});
+</script>
+<script src="src/i18n.js"></script>
+</body>
+</html>

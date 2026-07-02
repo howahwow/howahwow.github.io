@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIV 3 — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" class="active" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/bw/IMG_9506.jpg" alt="SIV 3, Belgrade" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">SIV 3</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label">Full Name</p><p class="building-meta-value">Savezno Izvršno Veće 3</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1963</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Federal Government</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">New Belgrade</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Yugoslav Modernism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">8</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="belgrade.siv3.desc">
+  <p>SIV 3 — the third building of the Savezno Izvršno Veće (Federal Executive Council) complex — is one of the most formally compelling administrative buildings in New Belgrade. A long, raised slab lifted on pilotis above an open ground floor, it presents a continuous horizontal facade of prefabricated concrete panels and deep-set windows that reads as a single unbroken surface of grey.</p>
+  <p>The Federal Executive Council buildings were the operational heart of socialist Yugoslavia's government — the buildings from which the country was administered. SIV 3's architecture embodies the technocratic confidence of Yugoslav self-management: rational, ordered, clean. The pilotis raise it from the ground in a gesture that owes everything to Le Corbusier but has absorbed it completely into a local idiom. Today the building houses various ministries of the Republic of Serbia, its purpose changed but its presence unchanged.</p>
+</div>
+
+<a href="../belgrade.html" class="back-link" data-i18n="back.belgrade">← Belgrade Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">8 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>44.8057° N &nbsp; 20.4640° E</span>
+  <span>SIV 3 &nbsp;·&nbsp; Belgrade</span>
+</footer>
+
+<script>
+const PHOTOS = ["IMG_9503.jpg","IMG_9506.jpg","IMG_9510.jpg","IMG_9512.jpg","IMG_9513.jpg","IMG_9516.jpg","IMG_9517.jpg","IMG_9520.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = `../images-web/full/${f}`;
+  d.innerHTML = `<img src="../images-thumb/full/${f}" alt="SIV 3 photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

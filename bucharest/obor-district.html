@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obor District — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" class="active" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/bucharest/obor-district/IMG_2422.JPG" alt="Obor District, Bucharest" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">Obor District</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.period">Period</p><p class="building-meta-value">1960s–1980s</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.type">Type</p><p class="building-meta-value">Urban District / Socialist Housing</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Obor, Bucharest</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Romanian Communist Modernism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">3</p></div>
+</div>
+<div class="building-description" data-i18n-html="bucharest.obor.desc">
+  <p>Obor is one of Bucharest's most authentic working-class districts — a neighbourhood defined by its large market, the Hala Obor covered market hall, and the surrounding communist-era apartment blocks that house the families who have lived and traded here for generations. The district sits in the northeast of central Bucharest, away from the monumental boulevards and tourist infrastructure of the city centre, and it looks it: the buildings are older, the surfaces are rougher, and the energy is commercial rather than ceremonial.</p>
+  <p>The communist-era blocks around Obor represent the ordinary face of socialist housing in Romania — not the showpiece projects but the practical mass housing that the Ceausescu regime built across the city in vast quantities to house the workers drawn to Bucharest by industrialisation. These blocks are austere, repetitive, and built to a standard that prioritised quantity over quality. They are also home to hundreds of thousands of people, and the life that happens in the spaces between them — the market stalls, the corner shops, the informal economy — gives the district a vitality that the architects of the nearby Palace of Parliament could never have planned.</p>
+</div>
+<a href="../bucharest.html" class="back-link" data-i18n="back.bucharest">← Bucharest Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">3 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>44.4502° N &nbsp; 26.1188° E</span>
+  <span>Obor District &nbsp;·&nbsp; Bucharest</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_2422.JPG","IMG_2423.jpg","IMG_2427.JPG"];
+const BASE = '../images-web/bucharest/obor-district/';
+const THUMB = '../images-thumb/bucharest/obor-district/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="Obor District photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

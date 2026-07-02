@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — HWC Travel</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="contact-layout">
+  <p class="contact-label">Get In Touch</p>
+  <h1 class="contact-title">Contact<br>Me</h1>
+
+  <form class="contact-form" id="contact-form">
+    <div class="contact-field">
+      <label for="cf-name">Name</label>
+      <input type="text" id="cf-name" name="name" placeholder="Your name" autocomplete="name">
+    </div>
+    <div class="contact-field">
+      <label for="cf-email">Email</label>
+      <input type="email" id="cf-email" name="email" placeholder="your@email.com" autocomplete="email">
+    </div>
+    <div class="contact-field">
+      <label for="cf-subject">Subject</label>
+      <input type="text" id="cf-subject" name="subject" placeholder="Regarding...">
+    </div>
+    <div class="contact-field">
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" name="message" placeholder="Write your message here..."></textarea>
+    </div>
+    <button type="submit" class="contact-submit">Send Message →</button>
+  </form>
+
+  <div class="contact-info">
+    <div class="contact-info-item">
+      <span class="ci-label">Email</span>
+      <span>landscapedicky0611@gmail.com</span>
+    </div>
+    <div class="contact-info-item">
+      <span class="ci-label">Based in</span>
+      <span>London, United Kingdom</span>
+    </div>
+    <div class="contact-info-item">
+      <span class="ci-label">Projects</span>
+      <span>Belgrade &nbsp;·&nbsp; Berlin &nbsp;·&nbsp; London &nbsp;·&nbsp; Brutalism</span>
+    </div>
+    <div class="contact-info-item">
+      <span class="ci-label">Instagram</span>
+      <span><a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--accent)">@howah_</a></span>
+    </div>
+    <div class="contact-info-item">
+      <span class="ci-label">TikTok</span>
+      <span><a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--accent)">@howahc_</a></span>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>Belgrade &nbsp;·&nbsp; Berlin &nbsp;·&nbsp; London</span>
+  <span>HWC Travel &nbsp;·&nbsp; Dicky Chan</span>
+  <span>
+    <a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--mid);margin-right:1rem;">IG @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--mid);">TT @howahc_</a>
+  </span>
+</footer>
+
+<script src="src/i18n.js"></script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var name = document.getElementById('cf-name').value.trim();
+  var subject = document.getElementById('cf-subject').value.trim() || 'HWC Travel enquiry';
+  var message = document.getElementById('cf-message').value.trim();
+  var body = message + (name ? '\n\n— ' + name : '');
+  location.href = 'mailto:landscapedicky0611@gmail.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>London — HWC Travel</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" class="active" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="images-web/london/bw/IMG_1432.jpg" alt="National Theatre, London" loading="eager">
+  <div class="hero-content">
+    <p class="hero-label" data-i18n="london.hero.label">United Kingdom &nbsp;·&nbsp; British Brutalism</p>
+    <h1 class="hero-title">LONDON</h1>
+    <p class="hero-sub" data-i18n="london.hero.sub">Brutalist Architecture &nbsp;·&nbsp; 1950–1980</p>
+  </div>
+  <p class="hero-scroll">Scroll ↓</p>
+</section>
+
+<div class="section-head">
+  <h2 data-i18n="section.buildings">Buildings</h2>
+  <span class="count">12 landmarks</span>
+</div>
+
+<div class="buildings-grid">
+
+  <a href="london/barbican.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1350.jpg" alt="Barbican Centre" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">01 / 12</p>
+      <h2 class="building-card-name">Barbican Centre</h2>
+      <p class="building-card-meta">10 photos</p>
+    </div>
+  </a>
+
+  <a href="london/trellick-tower.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1222.jpg" alt="Trellick Tower" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">02 / 12</p>
+      <h2 class="building-card-name">Trellick Tower</h2>
+      <p class="building-card-meta">7 photos</p>
+    </div>
+  </a>
+
+  <a href="london/national-theatre.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1432.jpg" alt="National Theatre" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">03 / 12</p>
+      <h2 class="building-card-name">National Theatre</h2>
+      <p class="building-card-meta">7 photos</p>
+    </div>
+  </a>
+
+  <a href="london/hayward-gallery.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1474.jpg" alt="Hayward Gallery" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">04 / 12</p>
+      <h2 class="building-card-name">Hayward Gallery</h2>
+      <p class="building-card-meta">7 photos</p>
+    </div>
+  </a>
+
+  <a href="london/alexandra-ainsworth.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1175.jpg" alt="Alexandra &amp; Ainsworth Estate" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">05 / 12</p>
+      <h2 class="building-card-name">Alexandra &amp; Ainsworth Estate</h2>
+      <p class="building-card-meta">8 photos</p>
+    </div>
+  </a>
+
+  <a href="london/brunswick-centre.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1260.jpg" alt="The Brunswick Centre" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">06 / 12</p>
+      <h2 class="building-card-name">The Brunswick Centre</h2>
+      <p class="building-card-meta">6 photos</p>
+    </div>
+  </a>
+
+  <a href="london/ucl-education.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1276.jpg" alt="UCL Institute of Education" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">07 / 12</p>
+      <h2 class="building-card-name">UCL Institute of Education</h2>
+      <p class="building-card-meta">7 photos</p>
+    </div>
+  </a>
+
+  <a href="london/ministry-of-justice.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1310.jpg" alt="Ministry of Justice" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">08 / 12</p>
+      <h2 class="building-card-name">Ministry of Justice</h2>
+      <p class="building-card-meta">6 photos</p>
+    </div>
+  </a>
+
+  <a href="london/swiss-cottage-library.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1169.jpg" alt="Swiss Cottage Library" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">09 / 12</p>
+      <h2 class="building-card-name">Swiss Cottage Library</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+  <a href="london/soas.html" class="building-card">
+    <img src="images-thumb/london/full/IMG_1289.jpg" alt="SOAS" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">10 / 12</p>
+      <h2 class="building-card-name">SOAS</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="london/lambeth-towers.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1507.jpg" alt="Lambeth Towers" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">11 / 12</p>
+      <h2 class="building-card-name">Lambeth Towers</h2>
+      <p class="building-card-meta">Lambeth &nbsp;·&nbsp; 1 photo</p>
+    </div>
+  </a>
+
+  <a href="london/cotton-garden.html" class="building-card">
+    <img src="images-thumb/london/bw/IMG_1511.jpg" alt="Cotton Garden Estate" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">12 / 12</p>
+      <h2 class="building-card-name">Cotton Garden Estate</h2>
+      <p class="building-card-meta">6 photos</p>
+    </div>
+  </a>
+
+</div>
+
+<footer class="site-footer">
+  <span>51.5074° N &nbsp; 0.1278° W</span>
+  <span>HWC Travel &nbsp;·&nbsp; Dicky Chan</span>
+  <span>
+    <a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--mid);margin-right:1rem;">IG @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--mid);">TT @howahc_</a>
+  </span>
+</footer>
+
+<script src="src/i18n.js"></script>
+</body>
+</html>
+
+

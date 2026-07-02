@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TehnoImport — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" class="active" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/bucharest/tehnoimport/IMG_1979.JPG" alt="TehnoImport Building, Bucharest" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">TehnoImport</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1965</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Office / Commercial</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Calea Victoriei, Bucharest</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Socialist Modernism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">1</p></div>
+</div>
+<div class="building-description" data-i18n-html="bucharest.tehnoimport.desc">
+  <p>The TehnoImport Building on Calea Victoriei is one of Bucharest's most formally startling structures — a cylindrical office tower whose entire surface is wrapped in horizontal concrete bands separated by deep recessed windows, giving it the appearance of an enormous stacked barrel or a coil of concrete rope. Built in 1965 for the state foreign trade enterprise TehnoImport, it was among the first major modernist office buildings in communist Romania, an early signal of the architectural liberalisation that would follow under Ceausescu's relatively open cultural policy of the late 1960s.</p>
+  <p>The building occupies a corner site at one of central Bucharest's busiest intersections, and its circular form is a direct response to that condition: rather than presenting a flat face to one street and a flank to the other, it faces all directions equally, the curve eliminating the corner entirely. Viewed from below, the horizontal banding creates a powerful rhythm that tightens toward the top, the concrete rings becoming progressively more compressed as the tower rises.</p>
+</div>
+<a href="../bucharest.html" class="back-link" data-i18n="back.bucharest">← Bucharest Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">1 photo</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>44.4432° N &nbsp; 26.0950° E</span>
+  <span>TehnoImport &nbsp;·&nbsp; Bucharest</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_1979.JPG"];
+const BASE = '../images-web/bucharest/tehnoimport/';
+const THUMB = '../images-thumb/bucharest/tehnoimport/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="TehnoImport photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

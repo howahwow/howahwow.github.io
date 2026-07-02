@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chișinău State Circus — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" class="active" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/chisinau/state-circus/IMG_3016.JPG" alt="Chișinău State Circus" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Chișinău State Circus</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.architect">Architect</p><p class="building-meta-value">Semyon Fridlin</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1981</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Circus</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Chișinău, Moldova</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Soviet Brutalism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">6</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="chisinau.circus.desc">
+  <p>The Chișinău State Circus is one of the most architecturally remarkable buildings in the former Soviet Union — a circular brutalist structure whose exterior is defined by a dramatic ring of angled concrete fins, each one a massive blade of white stone splaying outward from the cylindrical body of the building. Completed in 1981 and designed by Semyon Fridlin, the building seats 1,900 and has been in continuous operation since opening, making it both an architectural and cultural landmark of the Moldovan capital.</p>
+  <p>The formal language is pure late Soviet: the structural elements are made expressive, the concrete treated as sculpture rather than mere enclosure. The bronze relief above the entrance depicts circus performers — acrobats, clowns, equestrians — in the confident Soviet tradition of monumental public art. The entire building seems to be in motion, the fins suggesting the rotating top of a circus tent translated into permanent, load-bearing concrete. In a city that lost much of its Soviet-era fabric to post-independence renovation, the Circus stands largely unaltered and all the more powerful for it.</p>
+</div>
+
+<a href="../chisinau.html" class="back-link" data-i18n="back.chisinau">← Chișinău Buildings</a>
+
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">6 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>47.0232° N &nbsp; 28.8425° E</span>
+  <span>Chișinău State Circus &nbsp;·&nbsp; Chișinău</span>
+</footer>
+
+<script>
+const PHOTOS = ["IMG_3016.JPG","IMG_3021.JPG","IMG_3023.JPG","IMG_3028.JPG","IMG_3029.JPG","IMG_3032.JPG"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = `../images-web/chisinau/state-circus/${f}`;
+  d.innerHTML = `<img src="../images-thumb/chisinau/state-circus/${f}" alt="Chișinău State Circus photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

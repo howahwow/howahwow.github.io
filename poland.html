@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poland — HWC Travel</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" class="active" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="images-web/poland/warsaw-uprising-monument/IMG_3185.JPG" alt="Warsaw Uprising Monument, Poland" loading="eager" style="filter:grayscale(1) brightness(0.5);">
+  <div class="hero-content">
+    <p class="hero-label" data-i18n="poland.hero.label">Poland · Warsaw &amp; Wroclaw</p>
+    <h1 class="hero-title">POLAND</h1>
+    <p class="hero-sub" data-i18n="poland.hero.sub">Brutalism &amp; Communist-era Architecture · 1950–1989</p>
+  </div>
+  <p class="hero-scroll">Scroll ↓</p>
+</section>
+
+<div class="section-head">
+  <h2 data-i18n="section.buildings">Buildings</h2>
+  <span class="count">9 spots</span>
+</div>
+
+<div class="search-bar">
+  <input class="search-input" id="spot-search" type="text" placeholder="Search spots…" autocomplete="off">
+</div>
+
+<div class="buildings-grid">
+
+  <a href="poland/warsaw-uprising-monument.html" class="building-card">
+    <img src="images-thumb/poland/warsaw-uprising-monument/IMG_3185.JPG" alt="Warsaw Uprising Monument" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">01 / 09</p>
+      <h2 class="building-card-name">Warsaw Uprising Monument</h2>
+      <p class="building-card-meta">5 photos</p>
+    </div>
+  </a>
+
+  <a href="poland/faculty-electronics-it.html" class="building-card">
+    <img src="images-thumb/poland/faculty-electronics-it/IMG_3215.JPG" alt="Faculty of Electronics and IT, Warsaw University of Technology" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">02 / 09</p>
+      <h2 class="building-card-name">Faculty of Electronics &amp; IT</h2>
+      <p class="building-card-meta">4 photos</p>
+    </div>
+  </a>
+
+  <a href="poland/smolna-8.html" class="building-card">
+    <img src="images-thumb/poland/smolna-8/IMG_3352.JPG" alt="Smolna 8, Warsaw" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">03 / 09</p>
+      <h2 class="building-card-name">Smolna 8</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+  <a href="poland/palace-of-culture.html" class="building-card">
+    <img src="images-thumb/poland/palace-of-culture/IMG_3365.JPG" alt="Palace of Culture and Science, Warsaw" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">04 / 09</p>
+      <h2 class="building-card-name">Palace of Culture and Science</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+  <a href="poland/ochota-station.html" class="building-card">
+    <img src="images-thumb/poland/ochota-station/IMG_3379.JPG" alt="Warszawa Ochota Station" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">05 / 09</p>
+      <h2 class="building-card-name">Warszawa Ochota Station</h2>
+      <p class="building-card-meta">4 photos</p>
+    </div>
+  </a>
+
+  <a href="poland/soviet-military-cemetery.html" class="building-card">
+    <img src="images-thumb/poland/soviet-military-cemetery/IMG_3386.JPG" alt="Soviet Military Cemetery - Mausoleum Park, Warsaw" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">06 / 09</p>
+      <h2 class="building-card-name">Soviet Military Cemetery</h2>
+      <p class="building-card-meta">6 photos</p>
+    </div>
+  </a>
+
+  <a href="poland/pomnik-konstytucji.html" class="building-card">
+    <img src="images-thumb/poland/pomnik-konstytucji/IMG_3436.JPG" alt="Pomnik Konstytucji 3 Maja, Wroclaw" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">07 / 09</p>
+      <h2 class="building-card-name">Pomnik Konstytucji 3 Maja</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="poland/audytorium-chemii.html" class="building-card">
+    <img src="images-thumb/poland/audytorium-chemii/IMG_3444.JPG" alt="Audytorium Wydzialu Chemii, Wroclaw University" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">08 / 09</p>
+      <h2 class="building-card-name">Audytorium Wydziału Chemii</h2>
+      <p class="building-card-meta">7 photos</p>
+    </div>
+  </a>
+
+  <a href="poland/wroclawski-manhattan.html" class="building-card">
+    <img src="images-thumb/poland/wroclawski-manhattan/IMG_3468.JPG" alt="Wrocławski Manhattan" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">09 / 09</p>
+      <h2 class="building-card-name">Wrocławski Manhattan</h2>
+      <p class="building-card-meta">8 photos</p>
+    </div>
+  </a>
+
+</div>
+
+<footer class="site-footer">
+  <span>52.2297° N &nbsp; 21.0122° E</span>
+  <span>HWC Travel &nbsp;·&nbsp; Dicky Chan</span>
+  <span>
+    <a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--mid);margin-right:1rem;">IG @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--mid);">TT @howahc_</a>
+  </span>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var inp = document.getElementById('spot-search');
+  if (!inp) return;
+  inp.addEventListener('input', function() {
+    var q = this.value.toLowerCase();
+    document.querySelectorAll('.building-card').forEach(function(card) {
+      var name = card.querySelector('.building-card-name');
+      card.style.display = (!q || (name && name.textContent.toLowerCase().indexOf(q) !== -1)) ? '' : 'none';
+    });
+  });
+});
+</script>
+<script src="src/i18n.js"></script>
+</body>
+</html>

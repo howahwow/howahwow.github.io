@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belgrade — HWC Travel</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" class="active" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="images-web/bw/IMG_9550.jpg" alt="Genex Tower, Belgrade" loading="eager">
+  <div class="hero-content">
+    <p class="hero-label" data-i18n="belgrade.hero.label">Serbia &nbsp;·&nbsp; Socialist Yugoslavia</p>
+    <h1 class="hero-title">BELGRADE</h1>
+    <p class="hero-sub" data-i18n="belgrade.hero.sub">Brutalist Architecture &nbsp;·&nbsp; 1960–1985</p>
+  </div>
+  <p class="hero-scroll">Scroll ↓</p>
+</section>
+
+<div style="padding: 0.5rem var(--pad) 2rem;">
+  <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:8px 16px;display:inline-block;">&#9654; Watch the reel on TikTok @howahc_</a>
+</div>
+
+<div class="section-head">
+  <h2 data-i18n="section.buildings">Buildings</h2>
+  <span class="count">11 landmarks</span>
+</div>
+
+<div class="buildings-grid">
+
+  <a href="buildings/milan-muskatirovic.html" class="building-card">
+    <img src="images-thumb/bw/IMG_9940.jpg" alt="Milan Muskatirovic Sports Centre" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">01 / 11</p>
+      <h2 class="building-card-name">Milan Muškatirović Sports Centre</h2>
+      <p class="building-card-meta">4 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/genex-tower.html" class="building-card">
+    <img src="images-thumb/bw/IMG_9550.jpg" alt="Genex Tower" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">02 / 11</p>
+      <h2 class="building-card-name">Genex Tower</h2>
+      <p class="building-card-meta">11 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/toblerone.html" class="building-card">
+    <img src="images-thumb/bw/IMG_9702.jpg" alt="Toblerone Building" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">03 / 11</p>
+      <h2 class="building-card-name">Toblerone Building</h2>
+      <p class="building-card-meta">2 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/eastern-city-gates.html" class="building-card">
+    <img src="images-thumb/bw/IMG_9688.jpg" alt="Eastern City Gates" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">04 / 11</p>
+      <h2 class="building-card-name">Eastern City Gates</h2>
+      <p class="building-card-meta">9 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/block-22-23.html" class="building-card">
+    <img src="images-thumb/full/IMG_9837.jpg" alt="Block 22 and 23" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">05 / 11</p>
+      <h2 class="building-card-name">Block 22 and 23</h2>
+      <p class="building-card-meta">14 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/block-62-63.html" class="building-card">
+    <img src="images-thumb/full/IMG_9760.jpg" alt="Block 62 and 63" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">06 / 11</p>
+      <h2 class="building-card-name">Block 62 and 63</h2>
+      <p class="building-card-meta">14 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/palace-of-serbia.html" class="building-card">
+    <img src="images-thumb/full/IMG_9450.jpg" alt="Palace of Serbia" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">07 / 11</p>
+      <h2 class="building-card-name">Palace of Serbia</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/siv-3.html" class="building-card">
+    <img src="images-thumb/bw/IMG_9506.jpg" alt="SIV 3" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">08 / 11</p>
+      <h2 class="building-card-name">SIV 3</h2>
+      <p class="building-card-meta">8 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/new-belgrade-city-hall.html" class="building-card">
+    <img src="images-thumb/bw/IMG_9495.jpg" alt="New Belgrade City Hall" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">09 / 11</p>
+      <h2 class="building-card-name">New Belgrade City Hall</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/sava-centre.html" class="building-card">
+    <img src="images-thumb/full/IMG_9847.jpg" alt="Sava Centre" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">10 / 11</p>
+      <h2 class="building-card-name">Sava Centre</h2>
+      <p class="building-card-meta">3 photos</p>
+    </div>
+  </a>
+
+  <a href="buildings/urban-institute.html" class="building-card">
+    <img src="images-thumb/full/IMG_9731.jpg" alt="Urban Institute Belgrade" loading="lazy">
+    <div class="building-card-info">
+      <p class="building-card-num">11 / 11</p>
+      <h2 class="building-card-name">Urban Institute Belgrade</h2>
+      <p class="building-card-meta">4 photos</p>
+    </div>
+  </a>
+
+</div>
+
+<footer class="site-footer">
+  <span>44.8178° N &nbsp; 20.4569° E</span>
+  <span>HWC Travel &nbsp;·&nbsp; Dicky Chan</span>
+  <span>
+    <a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--mid);margin-right:1rem;">IG @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--mid);">TT @howahc_</a>
+  </span>
+</footer>
+
+<script src="src/i18n.js"></script>
+</body>
+</html>
+
+

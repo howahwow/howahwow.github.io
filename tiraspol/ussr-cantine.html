@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USSR Cantine — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" class="active" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/tiraspol/ussr-cantine/IMG_2586.JPG" alt="USSR Cantine, Tiraspol" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">USSR Cantine</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Workers' Canteen</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Tiraspol, Transnistria</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Soviet Canteen</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">12</p></div>
+</div>
+<div class="building-description" data-i18n-html="tiraspol.cantine.desc">
+  <p>The USSR Cantine in Tiraspol is one of the most perfectly preserved Soviet-era canteens still in daily operation — a workers' cafeteria that has continued to serve hot food through the collapse of the Soviet Union, the Transnistrian War of 1992, and three decades of frozen-conflict existence. The interior has been maintained with minimal alteration: the same surfaces, the same institutional colour palette, the same counter service format as when it opened.</p>
+  <p>Canteens of this type were the backbone of Soviet public feeding: subsidised, functional, and accessible, they fed factory workers, students, and public servants at prices calibrated to working-class wages. In Transnistria, where the Soviet economic and social model was never formally dismantled, this cantine continues to serve its original purpose with a directness that food culture in the rest of the world can only simulate.</p>
+</div>
+<a href="../tiraspol.html" class="back-link" data-i18n="back.tiraspol">← Tiraspol Sites</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">12 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>46.8491° N &nbsp; 29.6297° E</span>
+  <span>USSR Cantine &nbsp;·&nbsp; Tiraspol</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_2586.JPG","IMG_2590.JPG","IMG_2594.JPG","IMG_2597.JPG","IMG_2599.JPG","IMG_2603.JPG","IMG_2608.JPG","IMG_2609.JPG","IMG_2610.JPG","IMG_2615.JPG","IMG_2620.JPG","IMG_2621.JPG"];
+const BASE = '../images-web/tiraspol/ussr-cantine/';
+const THUMB = '../images-thumb/tiraspol/ussr-cantine/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="USSR Cantine photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

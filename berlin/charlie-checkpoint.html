@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkpoint Charlie — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" class="active" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/berlin/charlie-checkpoint/img_6879.jpg" alt="Checkpoint Charlie, Berlin" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Checkpoint Charlie</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.active">Active</p><p class="building-meta-value">1961–1990</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Friedrichstrasse, Berlin</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.type">Type</p><p class="building-meta-value">Allied Crossing Point</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.context">Context</p><p class="building-meta-value">Cold War Front Line</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">2</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="berlin.charlie.desc">
+  <p>Checkpoint Charlie was the most famous crossing point between East and West Berlin during the Cold War — the only crossing available to Allied military personnel, foreign diplomats, and Western foreigners. The name came from the NATO phonetic alphabet: Alpha was the first checkpoint, Bravo the second, Charlie the third. In October 1961, just weeks after the Wall went up, American and Soviet tanks faced each other here for sixteen hours in a standoff that brought the two superpowers closer to direct military confrontation than at any point since Korea.</p>
+  <p>The checkpoint booth that stands here today is a reconstruction — the original was removed in 1990 when the crossing became irrelevant. What makes Checkpoint Charlie uncomfortable is precisely this reconstruction: the area around it has become tourist infrastructure, the solemnity replaced by costumed actors and overpriced museums. The real memorial weight sits elsewhere — at the documentation centre, in the nearby street signs marking where the Wall ran. But the site's history is impossible to fully displace: this is where the Iron Curtain had its most visible, most theatrical, most photographed address.</p>
+</div>
+
+<a href="../berlin.html" class="back-link" data-i18n="back.berlin">← Berlin Locations</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">2 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>52.5075° N &nbsp; 13.3904° E</span>
+  <span>Checkpoint Charlie &nbsp;·&nbsp; Berlin</span>
+</footer>
+
+<script>
+const BASE = '../images-web/berlin/charlie-checkpoint/';
+const THUMB = '../images-thumb/berlin/charlie-checkpoint/';
+const PHOTOS = ["img_6879.jpg","img_6882.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = `<img src="${THUMB}${f}" alt="Checkpoint Charlie photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

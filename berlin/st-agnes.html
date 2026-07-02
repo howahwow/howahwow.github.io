@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>St. Agnes — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" class="active" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/berlin/st-agnes/img_6871.jpg" alt="St. Agnes Church, Berlin" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">St. Agnes</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.architect">Architect</p><p class="building-meta-value">Werner Düttmann</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1967</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Kreuzberg, Berlin</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Brutalism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">2</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="berlin.stagnes.desc">
+  <p>St. Agnes in Kreuzberg is one of the finest brutalist churches in Europe — a monolithic concrete cube with a cylindrical bell tower, designed by Werner Düttmann and consecrated in 1967. The exterior is deliberately austere: raw concrete, minimal openings, a mass that sits in its urban block with the solidity of something much older. The comparison to a fortress or a bunker is inevitable and was probably intended — postwar German Catholicism rebuilding its presence in a bombed-out city, using the materials of reconstruction.</p>
+  <p>The interior resolves the exterior's severity into something genuinely meditative: the concrete walls glow with diffused light, the proportions are generous, and the absence of ornament concentrates attention on the space itself. In 2012, after the parish merged with others, the building was converted into a gallery and art space by König Galerie — who understood correctly that they had been given one of the best-proportioned modernist spaces in Berlin. The conversion is among the most successful repurposings of sacred brutalism in recent European architecture.</p>
+</div>
+
+<a href="../berlin.html" class="back-link" data-i18n="back.berlin">← Berlin Locations</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">2 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>52.4993° N &nbsp; 13.4004° E</span>
+  <span>St. Agnes &nbsp;·&nbsp; Kreuzberg, Berlin</span>
+</footer>
+
+<script>
+const BASE = '../images-web/berlin/st-agnes/';
+const THUMB = '../images-thumb/berlin/st-agnes/';
+const PHOTOS = ["img_6871.jpg","img_6874.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = `<img src="${THUMB}${f}" alt="St. Agnes photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

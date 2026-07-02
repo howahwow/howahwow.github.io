@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palace of Serbia — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" class="active" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/full/IMG_9450.jpg" alt="Palace of Serbia, Belgrade" loading="eager" style="filter:brightness(0.45) grayscale(0.2)">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Palace of Serbia</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.architects">Architects</p><p class="building-meta-value">Mihailo Janković et al.</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1961</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Government</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">New Belgrade</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Socialist Classicism / Modernism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">3</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="belgrade.palace.desc">
+  <p>The Palace of Serbia in New Belgrade is one of the most important state buildings of postwar Yugoslavia — a massive governmental complex housing federal ministries and state organs, built on the emerging territory of New Belgrade at the moment when that city was being invented. Completed in 1961, the building sits at the junction of several major axes in the New Belgrade grid, commanding the surrounding flat landscape with a horizontal mass of stone and glass.</p>
+  <p>The architecture sits at the intersection of socialist classicism and early modernism: the scale and symmetry of the former, the materials and fenestration of the latter. It is a building that needed to project authority and permanence, and it does so — the stone cladding, the long horizontal lines, the monumental proportions all speak of a state that had decided to build for centuries. The Yugoslavia that commissioned it is gone; the building remains.</p>
+</div>
+
+<a href="../belgrade.html" class="back-link" data-i18n="back.belgrade">← Belgrade Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">3 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>44.8043° N &nbsp; 20.4623° E</span>
+  <span>Palace of Serbia &nbsp;·&nbsp; Belgrade</span>
+</footer>
+
+<script>
+const PHOTOS = ["IMG_9450.jpg","IMG_9455.jpg","IMG_9456.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = `../images-web/full/${f}`;
+  d.innerHTML = `<img src="../images-thumb/full/${f}" alt="Palace of Serbia photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

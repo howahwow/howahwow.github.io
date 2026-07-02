@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sava Centre — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" class="active" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/full/IMG_9847.jpg" alt="Sava Centre, Belgrade" loading="eager" style="filter:brightness(0.45) grayscale(0.2)">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Sava Centre</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.architect">Architect</p><p class="building-meta-value">Stojan Maksimović</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1979</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Congress / Cultural Centre</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">New Belgrade</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Yugoslav Modernism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">3</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="belgrade.sava.desc">
+  <p>The Sava Centre is one of Belgrade's premier congress and cultural facilities — a large-scale modernist complex on the Sava riverfront in New Belgrade that was built to host international conferences, exhibitions, and performances at a moment when Yugoslavia was a significant player in the Non-Aligned Movement and hosted major international events.</p>
+  <p>Designed by Stojan Maksimović and completed in 1979, the building combines a congress hall, hotel, and cultural spaces within a single massed structure on the riverside. The architecture is characteristically Yugoslav in its ambitions: large, confident, technically sophisticated, and entirely free of the ideological timidity that constrained architecture in Warsaw Pact countries. Yugoslavia's non-alignment gave its architects the freedom to borrow from anywhere, and the Sava Centre shows it — this could be a building from almost any confident modernist tradition of the period.</p>
+</div>
+
+<a href="../belgrade.html" class="back-link" data-i18n="back.belgrade">← Belgrade Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">3 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>44.8088° N &nbsp; 20.4322° E</span>
+  <span>Sava Centre &nbsp;·&nbsp; Belgrade</span>
+</footer>
+
+<script>
+const PHOTOS = ["IMG_9842.jpg","IMG_9843.jpg","IMG_9847.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = `../images-web/full/${f}`;
+  d.innerHTML = `<img src="../images-thumb/full/${f}" alt="Sava Centre photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

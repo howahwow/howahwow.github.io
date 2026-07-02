@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenin Street Guesthouse — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" class="active" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/tiraspol/lenin-street-guesthouse/IMG_2626.JPG" alt="Lenin Street Guesthouse" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">Lenin Street Guesthouse</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Guesthouse / Hotel</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Tiraspol, Transnistria</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">2</p></div>
+</div>
+<div class="building-description" data-i18n-html="tiraspol.leninstreet.desc">
+  <p>On Lenin Street — Tiraspol's main boulevard, still carrying its Soviet name — this small guesthouse occupies a Soviet-era building that has been adapted into modest accommodation for the rare visitor who passes through. Tiraspol does not receive many tourists: the unrecognised state, the requirement to pass through border controls, and the limited international connections all conspire to keep visitor numbers extremely low.</p>
+  <p>Lenin Street itself is one of the most photogenic avenues in the post-Soviet world — wide, tree-lined, with the unchanged institutional buildings of the Soviet state on either side. Government ministries, the Supreme Soviet building, and the ornate Tiraspol Drama Theatre face the boulevard. To walk Lenin Street is to experience a city that chose preservation over transition, Soviet street furniture and all. The guesthouse on this street is a functional footnote to that decision: somewhere to sleep in a city that time, by design, has not quite left.</p>
+</div>
+<a href="../tiraspol.html" class="back-link" data-i18n="back.tiraspol">← Tiraspol Sites</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">2 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>46.8432° N &nbsp; 29.6356° E</span>
+  <span>Lenin Street Guesthouse &nbsp;·&nbsp; Tiraspol</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_2626.JPG","IMG_2627.JPG"];
+const BASE = '../images-web/tiraspol/lenin-street-guesthouse/';
+const THUMB = '../images-thumb/tiraspol/lenin-street-guesthouse/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="Lenin Street Guesthouse photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

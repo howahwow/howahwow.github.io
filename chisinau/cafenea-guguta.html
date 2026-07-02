@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafenea Guguta — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" class="active" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/chisinau/cafenea-guguta/IMG_2515.JPG" alt="Cafenea Guguta, Chisinau" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">Cafenea Guguță</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.period">Period</p><p class="building-meta-value">1970s</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Cafe / Cultural Landmark</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Chisinau, Moldova</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Soviet Modernism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">2</p></div>
+</div>
+<div class="building-description" data-i18n-html="chisinau.guguta.desc">
+  <p>Cafenea Guguta is one of Chisinau's most beloved Soviet-era structures — a whimsical cafe designed in the form of a giant mushroom, named after the fictional boy hero of Spiridon Vangheli's classic Moldovan children's book series. The character Guguta lives in a giant hat; the cafe transposes this literary imagination into architecture, creating a building that is unmistakably Soviet in its ambition while being entirely playful in its execution.</p>
+  <p>Built in the 1970s, the structure sits in the Riscani district of Chisinau, a neighborhood of Soviet-era apartment blocks where its mushroom-shaped silhouette announces itself from a distance. The design belongs to a tradition of Soviet programmatic architecture — structures built to look like what they house or to communicate a cultural message through form. In a city of concrete rectangles, Cafenea Guguta is a reminder that the Soviet built environment could also make room for the imagination of children.</p>
+</div>
+<a href="../chisinau.html" class="back-link" data-i18n="back.chisinau">← Chisinau Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">2 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>47.0489° N &nbsp; 28.8571° E</span>
+  <span>Cafenea Guguta &nbsp;·&nbsp; Chisinau</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_2515.JPG","IMG_2516.JPG"];
+const BASE = '../images-web/chisinau/cafenea-guguta/';
+const THUMB = '../images-thumb/chisinau/cafenea-guguta/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="Cafenea Guguta photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

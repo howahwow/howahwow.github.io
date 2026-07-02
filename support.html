@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — HWC Travel</title>
+  <link rel="stylesheet" href="src/style.css">
+  <style>
+    .support-layout {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+    }
+    .support-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+    .support-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 5rem);
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+      color: var(--off-wht);
+      margin-bottom: 2.5rem;
+    }
+    .support-body p {
+      color: var(--light);
+      line-height: 1.75;
+      margin-bottom: 1.4rem;
+      font-size: 1rem;
+    }
+    .support-body strong { color: var(--off-wht); }
+    .support-options {
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .support-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .support-option-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      min-width: 80px;
+      padding-top: 2px;
+    }
+    .support-option-text { flex: 1; }
+    .support-option-text p {
+      font-size: 0.92rem;
+      color: var(--light);
+      line-height: 1.6;
+      margin-bottom: 0.6rem;
+    }
+    .support-link {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 6px 14px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .support-link:hover { background: var(--accent); color: var(--bg); }
+    .social-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .social-link:hover { color: var(--accent); border-color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" class="active" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="support-layout">
+
+  <p class="support-label" data-i18n="support.label">Support My Work</p>
+  <h1 class="support-title" data-i18n="support.title">FUEL<br>THE NEXT<br>JOURNEY</h1>
+
+  <div class="support-body">
+    <p data-i18n="support.p1">This project is entirely self-funded. Every building here was reached on foot, by train, or by bus — photographed with an iPhone and edited late at night in hotel rooms. There are no agencies, no press trips, no sponsors. Just a curiosity about the places most people skip.</p>
+    <p data-i18n="support.p2">If you find value in this work — whether as a fellow architecture enthusiast, a traveller, or someone who just likes looking at brutalist concrete — you can support the next trip. Every contribution goes directly toward travel costs: trains, accommodation, and more time in cities worth documenting.</p>
+    <p data-i18n="support.p3"><strong>Next destinations being planned:</strong> Skopje, Sarajevo, Prishtina, Sofia. More Yugoslav modernism. More forgotten landmarks. More photographs.</p>
+  </div>
+
+  <div class="support-options">
+
+    <div class="support-option">
+      <div class="support-option-label" data-i18n="support.opt1.label">Ko-fi</div>
+      <div class="support-option-text">
+        <p data-i18n="support.opt1.text">A one-time or recurring contribution via Ko-fi. No account needed — any amount helps.</p>
+        <a href="https://ko-fi.com" class="support-link" target="_blank" rel="noopener" data-i18n="support.opt1.btn">Buy me a coffee →</a>
+      </div>
+    </div>
+
+    <div class="support-option">
+      <div class="support-option-label" data-i18n="support.opt2.label">Instagram</div>
+      <div class="support-option-text">
+        <p data-i18n="support.opt2.text">Follow and share the work. Visibility costs nothing and helps more people find these places.</p>
+        <a href="https://www.instagram.com/howah_/" class="support-link" target="_blank" rel="noopener">@howah_ →</a>
+      </div>
+    </div>
+
+    <div class="support-option">
+      <div class="support-option-label" data-i18n="support.opt3.label">TikTok</div>
+      <div class="support-option-text">
+        <p data-i18n="support.opt3.text">Short-form urban exploration and architecture — follow for video from the same journeys.</p>
+        <a href="https://www.tiktok.com/@howahc_" class="support-link" target="_blank" rel="noopener">@howahc_ →</a>
+      </div>
+    </div>
+
+    <div class="support-option">
+      <div class="support-option-label" data-i18n="support.opt4.label">Email</div>
+      <div class="support-option-text">
+        <p data-i18n="support.opt4.text">For collaboration, licensing, or anything else — get in touch directly.</p>
+        <a href="mailto:landscapedicky0611@gmail.com" class="support-link" data-i18n="support.opt4.btn">Get in touch →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="social-row">
+    <a href="https://www.instagram.com/howah_/" class="social-link" target="_blank" rel="noopener">Instagram @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" class="social-link" target="_blank" rel="noopener">TikTok @howahc_</a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <span>Belgrade &nbsp;·&nbsp; Berlin &nbsp;·&nbsp; London</span>
+  <span>HWC Travel &nbsp;·&nbsp; Dicky Chan</span>
+  <span>
+    <a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--mid);margin-right:1rem;">IG @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--mid);">TT @howahc_</a>
+  </span>
+</footer>
+
+<script src="src/i18n.js"></script>
+</body>
+</html>
+

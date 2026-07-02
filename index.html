@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HWC Travel — Brutalist &amp; Socialist Architecture Photography</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="images-web/bw/IMG_9550.jpg" alt="Genex Tower, Belgrade" loading="eager">
+  <div class="hero-content">
+    <p class="hero-label" data-i18n="home.hero.label">A photography project</p>
+    <h1 class="hero-title">HWC Travel</h1>
+    <p class="hero-sub" data-i18n="home.hero.sub">Brutalism &nbsp;·&nbsp; Socialist Modernism &nbsp;·&nbsp; Belgrade &nbsp;·&nbsp; Berlin &nbsp;·&nbsp; London &nbsp;·&nbsp; Chișinău &nbsp;·&nbsp; Bucharest &nbsp;·&nbsp; Tiraspol &nbsp;·&nbsp; Poland</p>
+  </div>
+  <p class="hero-scroll">Scroll ↓</p>
+</section>
+
+<div class="section-head">
+  <h2 data-i18n="section.cities">Cities</h2>
+  <span class="count">07 cities &nbsp;·&nbsp; 90 locations</span>
+</div>
+
+<div class="city-grid">
+
+  <a href="belgrade.html" class="city-card">
+    <img src="images-thumb/bw/IMG_9702.jpg" alt="Belgrade brutalist architecture" loading="lazy">
+    <div class="city-card-content">
+      <p class="city-card-sub" data-i18n="home.city.belgrade.sub">Serbia</p>
+      <h2 class="city-card-title">BEOGRAD</h2>
+      <p class="city-card-count">11 buildings &nbsp;·&nbsp; Socialist Yugoslavia &nbsp;·&nbsp; 1960–1985</p>
+    </div>
+  </a>
+
+  <a href="berlin.html" class="city-card">
+    <img src="images-thumb/berlin/alexanderplatz/berlin-tv-tower.jpg" alt="Berlin DDR architecture" loading="lazy">
+    <div class="city-card-content">
+      <p class="city-card-sub" data-i18n="home.city.berlin.sub">Germany</p>
+      <h2 class="city-card-title">BERLIN</h2>
+      <p class="city-card-count">10 locations &nbsp;·&nbsp; DDR &amp; Cold War &nbsp;·&nbsp; 1945–1990</p>
+    </div>
+  </a>
+
+  <a href="london.html" class="city-card">
+    <img src="images-thumb/london/bw/IMG_1350.jpg" alt="London brutalist architecture" loading="lazy">
+    <div class="city-card-content">
+      <p class="city-card-sub" data-i18n="home.city.london.sub">United Kingdom</p>
+      <h2 class="city-card-title">LONDON</h2>
+      <p class="city-card-count">12 buildings &nbsp;·&nbsp; British Brutalism &nbsp;·&nbsp; 1950–1980</p>
+    </div>
+  </a>
+
+  <a href="chisinau.html" class="city-card">
+    <img src="images-thumb/chisinau/state-circus/IMG_3017.JPG" alt="Chisinau State Circus" loading="lazy">
+    <div class="city-card-content">
+      <p class="city-card-sub" data-i18n="home.city.chisinau.sub">Moldova</p>
+      <h2 class="city-card-title">CHIȘINĂU</h2>
+      <p class="city-card-count">19 spots &nbsp;·&nbsp; Soviet Modernism &nbsp;·&nbsp; 1960–1990</p>
+    </div>
+  </a>
+
+  <a href="bucharest.html" class="city-card">
+    <img src="images-thumb/bucharest/palace-of-parliament/IMG_2351.JPG" alt="Bucharest socialist architecture" loading="lazy">
+    <div class="city-card-content">
+      <p class="city-card-sub" data-i18n="home.city.bucharest.sub">Romania</p>
+      <h2 class="city-card-title">BUCHAREST</h2>
+      <p class="city-card-count">12 spots &nbsp;·&nbsp; Communist Romania &nbsp;·&nbsp; 1950–1989</p>
+    </div>
+  </a>
+
+  <a href="tiraspol.html" class="city-card">
+    <img src="images-thumb/tiraspol/dom-sovetov/IMG_2667.JPG" alt="Tiraspol Soviet architecture" loading="lazy">
+    <div class="city-card-content">
+      <p class="city-card-sub" data-i18n="home.city.tiraspol.sub">Transnistria</p>
+      <h2 class="city-card-title">TIRASPOL</h2>
+      <p class="city-card-count">17 spots &nbsp;·&nbsp; Soviet Legacy &nbsp;·&nbsp; 1960–1992</p>
+    </div>
+  </a>
+
+  <a href="poland.html" class="city-card">
+    <img src="images-thumb/poland/warsaw-uprising-monument/IMG_3185.JPG" alt="Poland brutalist architecture" loading="lazy">
+    <div class="city-card-content">
+      <p class="city-card-sub" data-i18n="home.city.poland.sub">Poland</p>
+      <h2 class="city-card-title">POLAND</h2>
+      <p class="city-card-count">9 spots &nbsp;·&nbsp; Warsaw &amp; Wroclaw &nbsp;·&nbsp; 1950–1989</p>
+    </div>
+  </a>
+
+  <a href="support.html" class="city-card city-card--next">
+    <div class="city-card-next-inner">
+      <p class="city-card-sub" data-i18n="home.next.label">Next journeys</p>
+      <h2 class="city-card-title">SKOPJE &nbsp;·&nbsp; SARAJEVO<br>PRISHTINA &nbsp;·&nbsp; SOFIA</h2>
+      <p class="city-card-count" data-i18n="home.next.cta">Support the next trip →</p>
+    </div>
+  </a>
+
+</div>
+
+<footer class="site-footer">
+  <span>Belgrade &nbsp;·&nbsp; Berlin &nbsp;·&nbsp; London &nbsp;·&nbsp; Chișinău &nbsp;·&nbsp; Bucharest &nbsp;·&nbsp; Tiraspol &nbsp;·&nbsp; Poland</span>
+  <span>HWC Travel &nbsp;·&nbsp; Dicky Chan</span>
+  <span>
+    <a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--mid);margin-right:1rem;">IG @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--mid);">TT @howahc_</a>
+  </span>
+</footer>
+
+<script src="src/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soviet Military Cemetery — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    .building-banner img { filter: grayscale(1) brightness(0.5); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chisinau</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" class="active" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+<div class="building-banner">
+  <img src="../images-web/poland/soviet-military-cemetery/IMG_3386.JPG" alt="Soviet Military Cemetery - Mausoleum Park, Warsaw" loading="eager">
+  <div class="building-banner-content"><h1 class="building-page-title">Soviet Military Cemetery — Mausoleum Park</h1></div>
+</div>
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.type">Type</p><p class="building-meta-value">Military Cemetery &amp; Mausoleum</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Warsaw, Poland</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">6</p></div>
+</div>
+<div class="building-description" data-i18n-html="poland.sovietcemetery.desc">
+  <p>The Soviet Military Cemetery in Warsaw is the burial site of over 21,000 Soviet soldiers who died during the liberation of Warsaw from German occupation in January 1945. The Mausoleum Park at its centre is a formal ceremonial structure in the tradition of Soviet commemorative architecture: a processional space with a central mausoleum, flanked by rows of graves marked with red stars, the whole composition organised around the rituals of official grief and collective memory.</p>
+  <p>The cemetery occupies a politically complex position in contemporary Polish culture. The Soviet soldiers buried here did die in the liberation of Warsaw — the city that the Wehrmacht had largely destroyed, and which the Red Army ultimately took after the catastrophic failure of the 1944 Warsaw Uprising, which Stalin refused to support. The question of whether the Soviet arrival represented liberation or the beginning of a new occupation has shaped the way Poles remember and memorialise this period. The cemetery continues to be maintained and officially recognised, though the meanings attached to it have shifted substantially since the end of communist rule in 1989.</p>
+</div>
+<a href="../poland.html" class="back-link" data-i18n="back.poland">← Poland Sites</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">6 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+<footer class="site-footer">
+  <span>52.2083° N &nbsp; 21.0074° E</span>
+  <span>Soviet Military Cemetery &nbsp;·&nbsp; Warsaw</span>
+</footer>
+<script>
+const PHOTOS = ["IMG_3386.JPG","IMG_3392.JPG","IMG_3394.JPG","IMG_3399.JPG","IMG_3401.JPG","IMG_3406.JPG"];
+const BASE = '../images-web/poland/soviet-military-cemetery/';
+const THUMB = '../images-thumb/poland/soviet-military-cemetery/';
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach(function(f,i) {
+  var d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = '<img src="' + BASE + f + '" alt="Soviet Military Cemetery photo ' + (i+1) + '" loading="lazy"><span class="photo-item-num">' + String(i+1).padStart(3,'0') + '</span>';
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>

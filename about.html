@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — HWC Travel</title>
+  <link rel="stylesheet" href="src/style.css">
+  <style>
+    .about-name {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .social-link {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .social-link:hover { color: var(--accent); border-color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-logo"><a href="index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="about.html" class="active" data-i18n="nav.about">About Me</a></li>
+      <li><a href="belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="about-layout">
+
+  <div class="about-portrait">
+    <img src="images-web/about/selfie.jpg" alt="Dicky Chan" loading="eager">
+  </div>
+
+  <div class="about-text">
+    <p class="about-name">Dicky Chan</p>
+    <p class="about-label" data-i18n="about.label">About Me</p>
+    <h1 class="about-title" data-i18n-html="about.title">Documenting<br>Concrete<br>Utopias</h1>
+    <div class="about-body">
+      <p data-i18n="about.p1">A Chinese-speaking travel content creator based in the UK. Long-focused on Eastern Europe, the Balkans, the former Yugoslav territories, Soviet architecture, brutalism, urban culture, and historical spaces.</p>
+      <p data-i18n="about.p2">Using images and words to document the places that don't get much attention — but hold enormous power. If you also love architecture, urban wandering, history, and off-the-beaten-path travel, follow along.</p>
+      <p data-i18n="about.p3">All photographs are shot on an iPhone. The imperfect optics, the flat overcast light, the rain — these are features, not bugs. Brutalism was always at its best under grey skies.</p>
+    </div>
+
+    <div class="about-stats">
+      <div class="about-stat">
+        <div class="about-stat-num">90</div>
+        <div class="about-stat-label" data-i18n="about.stat.buildings">Buildings</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-num">07</div>
+        <div class="about-stat-label" data-i18n="about.stat.cities">Cities</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-num">07</div>
+        <div class="about-stat-label" data-i18n="about.stat.countries">Countries</div>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/howah_/" class="social-link" target="_blank" rel="noopener">Instagram @howah_</a>
+      <a href="https://www.tiktok.com/@howahc_" class="social-link" target="_blank" rel="noopener">TikTok @howahc_</a>
+      <a href="support.html" class="social-link" data-i18n="about.supportLink">Support my work →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <span>Belgrade &nbsp;·&nbsp; Berlin &nbsp;·&nbsp; London</span>
+  <span>HWC Travel &nbsp;·&nbsp; Dicky Chan</span>
+  <span>
+    <a href="https://www.instagram.com/howah_/" target="_blank" rel="noopener" style="color:var(--mid);margin-right:1rem;">IG @howah_</a>
+    <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="color:var(--mid);">TT @howahc_</a>
+  </span>
+</footer>
+
+<script src="src/i18n.js"></script>
+</body>
+</html>
+
+

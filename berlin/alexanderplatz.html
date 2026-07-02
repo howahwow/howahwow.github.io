@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexanderplatz — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" class="active" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/berlin/alexanderplatz/berlin-tv-tower.jpg" alt="Alexanderplatz, East Berlin" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Alexanderplatz<br>&amp; Surroundings</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.period">Period</p><p class="building-meta-value">1960s–1970s</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Mitte, East Berlin</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">DDR Modernism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.context">Context</p><p class="building-meta-value">Socialist Urban Centre</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">5</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="berlin.alex.desc">
+  <p>Alexanderplatz was the socialist showcase of East Berlin — the DDR's answer to the question of what the modern socialist city should look like. The vast open square, surrounded by towers of prefabricated concrete panels, was rebuilt after wartime destruction according to the principles of socialist modernism: wide pedestrian space, vertical accents, a scale designed to speak of collective ambition rather than individual experience.</p>
+  <p>The Fernsehturm (TV Tower), completed in 1969, rises 368 metres above the square and remains the tallest structure in Germany. Built by the East German state as a symbol of socialist technological achievement, it was intended to be visible from West Berlin — a provocation and a statement. Around it, Haus des Lehrers (the Teachers' House, designed by Hermann Henselmann) with its wraparound frieze, Haus des Reisens (the Travellers' House), and the World Time Clock create a coherent ensemble of DDR civic ambition. Walking through Alexanderplatz today is to walk through the residue of a state that no longer exists but left its mark in concrete.</p>
+</div>
+
+<a href="../berlin.html" class="back-link" data-i18n="back.berlin">← Berlin Locations</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">5 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>52.5219° N &nbsp; 13.4132° E</span>
+  <span>Alexanderplatz &nbsp;·&nbsp; Berlin</span>
+</footer>
+
+<script>
+const BASE = '../images-web/berlin/alexanderplatz/';
+const THUMB = '../images-thumb/berlin/alexanderplatz/';
+const PHOTOS = ["berlin-tv-tower.jpg","haus-des-lehrers.jpg","haus-des-reisens.jpg","img_6709.jpg","world-time-clock.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = BASE + f;
+  d.innerHTML = `<img src="${THUMB}${f}" alt="Alexanderplatz photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

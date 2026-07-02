@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block 22 and 23 — HWC Travel</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" class="active" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/full/IMG_9837.jpg" alt="Block 22 and 23, New Belgrade" loading="eager" style="filter:brightness(0.45) grayscale(0.2)">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Block 22<br>and 23</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.completed">Completed</p><p class="building-meta-value">1970s</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Mass Housing</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">New Belgrade</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Socialist Modernism</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">15</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="belgrade.block2223.desc">
+  <p>Blocks 22 and 23 are part of the vast residential grid of New Belgrade — the socialist planned city built on reclaimed marshland across the Sava River from old Belgrade. The "blocks" are not individual buildings but urban units: entire neighbourhoods defined by number, each containing apartment towers, green space, schools, and commercial ground floors arranged according to the modernist planning principles of the time.</p>
+  <p>New Belgrade was conceived as a tabula rasa, an opportunity to build the new socialist city from scratch without the constraints of inherited urban fabric. The results were extraordinary in their ambition and contradictory in their outcomes: vast open spaces between towers that were meant to be democratic parkland but often became difficult voids, and a scale of concrete repetition that was simultaneously impressive and alienating. Walking through the blocks today is to inhabit the residue of a particular ideological moment — one that took density and equality seriously, even if it did not always achieve them.</p>
+</div>
+
+<a href="../belgrade.html" class="back-link" data-i18n="back.belgrade">← Belgrade Buildings</a>
+
+<div style="padding: 0.5rem var(--pad) 2rem;">
+  <a href="https://www.tiktok.com/@howahc_" target="_blank" rel="noopener" style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:8px 16px;display:inline-block;">&#9654; Watch the reel on TikTok @howahc_</a>
+</div>
+
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">15 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>44.8125° N &nbsp; 20.4144° E</span>
+  <span>Block 22 &amp; 23 &nbsp;·&nbsp; New Belgrade</span>
+</footer>
+
+<script>
+const PHOTOS = ["IMG_9804.jpg","IMG_9808.jpg","IMG_9812.jpg","IMG_9814.jpg","IMG_9815.jpg","IMG_9816.jpg","IMG_9819.jpg","IMG_9823.jpg","IMG_9824.jpg","IMG_9825.jpg","IMG_9830.jpg","IMG_9832.jpg","IMG_9836.jpg","IMG_9837.jpg","IMG_9838.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = `../images-web/full/${f}`;
+  d.innerHTML = `<img src="../images-thumb/full/${f}" alt="Block 22 and 23 photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
+

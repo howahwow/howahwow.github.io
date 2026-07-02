@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministry of Justice — BRUTALIST</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .photo-item { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .photo-item.visible { opacity: 1; transform: none; }
+    
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-logo"><a href="../index.html">HWC Travel</a></div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav aria-label="Main navigation">
+    <ul class="site-nav">
+      <li><a href="../about.html" data-i18n="nav.about">About Me</a></li>
+      <li><a href="../belgrade.html" data-i18n="nav.belgrade">Belgrade</a></li>
+      <li><a href="../berlin.html" data-i18n="nav.berlin">Berlin</a></li>
+      <li><a href="../london.html" class="active" data-i18n="nav.london">London</a></li>
+      <li><a href="../chisinau.html" data-i18n="nav.chisinau">Chișinău</a></li>
+      <li><a href="../bucharest.html" data-i18n="nav.bucharest">Bucharest</a></li>
+      <li><a href="../tiraspol.html" data-i18n="nav.tiraspol">Tiraspol</a></li>
+      <li><a href="../poland.html" data-i18n="nav.poland">Poland</a></li>
+      <li><a href="../support.html" data-i18n="nav.support">Support</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">繁中</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="building-banner">
+  <img src="../images-web/london/bw/IMG_1310.jpg" alt="Ministry of Justice" loading="eager">
+  <div class="building-banner-content">
+    <h1 class="building-page-title">Ministry of Justice</h1>
+  </div>
+</div>
+
+<div class="building-meta-block">
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.function">Function</p><p class="building-meta-value">Government / Justice</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.location">Location</p><p class="building-meta-value">Westminster</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.period">Period</p><p class="building-meta-value">1960s–1970s</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.style">Style</p><p class="building-meta-value">Brutalist / Late Modern</p></div>
+  <div class="building-meta-item"><p class="building-meta-label" data-i18n="meta.photos">Photos</p><p class="building-meta-value">6</p></div>
+</div>
+
+<div class="building-description" data-i18n-html="london.moj.desc">
+  <p>The Ministry of Justice building on Petty France in Westminster is a large government complex that exemplifies the institutional brutalism of the postwar British state: long, horizontal, purposeful, and completely uninterested in charm. Its concrete and glass facades present a blunt face to the surrounding streets, the window grids and service elements articulated with the characteristic directness of the period.</p>
+  <p>Government buildings of this type — designed to house large bureaucracies, to process people and paperwork efficiently, to last — represent a civic confidence that has since retreated. The material language was expensive to maintain and easy to resent; the buildings often outlasted the institutions they were designed to project.</p>
+</div>
+
+<a href="../london.html" class="back-link" data-i18n="back.london">← London Buildings</a>
+<div class="section-head"><h2 data-i18n="section.gallery">Gallery</h2><span class="count">06 photos</span></div>
+<div class="photo-grid" id="photo-grid"></div>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close">ESC / CLOSE</button>
+  <button class="lightbox-nav lightbox-prev">&#8592;</button>
+  <img src="" alt="Full-size photo">
+  <button class="lightbox-nav lightbox-next">&#8594;</button>
+  <p class="lightbox-counter"></p>
+</div>
+
+<footer class="site-footer">
+  <span>51.4993° N  0.1351° W</span>
+  <span>Ministry of Justice &nbsp;·&nbsp; London</span>
+</footer>
+
+<script>
+const PHOTOS = ["IMG_1306.jpg","IMG_1310.jpg","IMG_1313.jpg","IMG_1314.jpg","IMG_1315.jpg","IMG_1316.jpg"];
+const grid = document.getElementById('photo-grid');
+PHOTOS.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'photo-item'; d.dataset.full = `../images-web/london/full/${f}`;
+  d.innerHTML = `<img src="../images-thumb/london/thumb/${f}" alt="Ministry of Justice photo ${i+1}" loading="lazy"><span class="photo-item-num">${String(i+1).padStart(3,'0')}</span>`;
+  grid.appendChild(d);
+});
+</script>
+<script src="../src/main.js"></script>
+<script src="../src/i18n.js"></script>
+</body>
+</html>
