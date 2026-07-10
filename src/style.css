@@ -168,14 +168,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 @media (max-width: 860px) {
   .nav-dropdown-menu {
-    display: flex;
+    display: none;
     position: static;
     border: none;
     background: transparent;
     backdrop-filter: none;
     min-width: auto;
   }
-  .nav-dropdown-toggle::after { display: none; }
+  .nav-dropdown.open .nav-dropdown-menu { display: flex; }
+  .nav-dropdown.open > .nav-dropdown-toggle { color: var(--off-wht); }
   .nav-dropdown-menu a { padding-left: calc(var(--pad) + 0.75rem); }
 }
 
