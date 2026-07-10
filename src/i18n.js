@@ -48,7 +48,7 @@ const TRANSLATIONS = {
 
     /* ── Index / hero ────────────────────── */
     'home.hero.label':           'A photography project',
-    'home.hero.sub':             'Brutalism · Socialist Modernism · Belgrade · Berlin · London · Chișinău · Bucharest · Tiraspol · Poland',
+    'home.hero.sub':             'HWC Travel · Brutalism · Socialist Modernism · Belgrade · Berlin · London · Chișinău · Bucharest · Tiraspol · Poland',
     'home.next.label':           'Next journeys',
     'home.next.cta':             'Support the next trip →',
     'home.city.belgrade.sub':    'Serbia',
@@ -349,7 +349,7 @@ const TRANSLATIONS = {
 
     /* ── Index / hero ────────────────────── */
     'home.hero.label':          '攝影計劃',
-    'home.hero.sub':            '粗野主義 · 社會主義現代主義 · 貝爾格勒 · 柏林 · 倫敦 · 基希訥烏 · 布加勒斯特 · 蒂拉斯波爾 · 波蘭',
+    'home.hero.sub':            'HWC Travel · 粗野主義 · 社會主義現代主義 · 貝爾格勒 · 柏林 · 倫敦 · 基希訥烏 · 布加勒斯特 · 蒂拉斯波爾 · 波蘭',
     'home.next.label':          '下一段旅程',
     'home.next.cta':            '支持下一趟旅程 →',
     'home.city.belgrade.sub':   '塞爾維亞',
