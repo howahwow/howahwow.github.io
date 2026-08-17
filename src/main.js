@@ -26,11 +26,18 @@
 
   function items() { return document.querySelectorAll('.photo-item'); }
 
+  // carry the thumbnail's descriptive alt over to the full-size viewer
+  function altOf(item) {
+    const img = item.querySelector('img');
+    return (img && img.alt) ? img.alt : 'Full-size photo';
+  }
+
   function open(i) {
     idx = i;
     const all = items();
     lbImg.src = '';
     lbImg.src = all[i].dataset.full;
+    lbImg.alt = altOf(all[i]);
     lbCounter.textContent = (i + 1) + ' / ' + all.length;
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -47,6 +54,7 @@
     idx = (idx + dir + all.length) % all.length;
     lbImg.src = '';
     lbImg.src = all[idx].dataset.full;
+    lbImg.alt = altOf(all[idx]);
     lbCounter.textContent = (idx + 1) + ' / ' + all.length;
   }
 
