@@ -504,6 +504,31 @@ body { padding-top: var(--nav-h); }
 }
 .building-description p:last-child { margin-bottom: 0; }
 
+/* ── keyword lines folded into H1 (visually identical to the old sub <p>) */
+.hero-title-sub,
+.city-hero-title-sub {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--light);
+}
+.building-page-title-sub {
+  display: block;
+  margin-top: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 /* ─────────────────────────────────────── RELATED BUILDINGS (building pages) */
 .related-grid {
   display: grid;
