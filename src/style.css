@@ -553,7 +553,11 @@ body { padding-top: var(--nav-h); }
   letter-spacing: 0.03em;
   line-height: 1.25;
   color: var(--off-wht);
+  margin: 0;                 /* it is an <h3> now — drop the UA heading margins */
 }
+
+/* compact section heading used above the description block */
+.section-head--tight { padding-top: 2rem; }
 .related-meta {
   font-family: var(--font-mono);
   font-size: 0.55rem;
@@ -972,3 +976,8 @@ body { padding-top: var(--nav-h); }
   color: var(--off-wht);
   margin-bottom: 0.3rem;
 }
+
+/* About page — inline index of city pages (internal links) */
+.about-index { margin-top: 1.4rem; }
+.about-index a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.about-index a:hover { color: var(--off-wht); }
