@@ -86,6 +86,9 @@ const TRANSLATIONS = {
     'meta.location':   'Location',
     'meta.style':      'Style',
     'meta.photos':     'Photos',
+    'meta.photographed': 'Photographed',
+    'byline.by':       'Photographs and text by',
+    'byline.shot':     'shot on iPhone, on foot',
     'meta.period':     'Period',
     'meta.context':    'Context',
     'meta.type':       'Type',
@@ -432,6 +435,9 @@ const TRANSLATIONS = {
     'meta.location':   '地點',
     'meta.style':      '風格',
     'meta.photos':     '照片',
+    'meta.photographed': '拍攝時間',
+    'byline.by':       '攝影與文字',
+    'byline.shot':     '以 iPhone 徒步拍攝',
     'meta.period':     '年代',
     'meta.context':    '背景',
     'meta.type':       '類型',
@@ -701,6 +707,14 @@ function applyLang(lang) {
     var key = el.dataset.i18nHtml;
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
+  /* capture dates: "June 2026" in English, "2026年6月" in Chinese */
+  var MONTHS_EN = ['', 'January', 'February', 'March', 'April', 'May', 'June',
+                   'July', 'August', 'September', 'October', 'November', 'December'];
+  document.querySelectorAll('time[data-y][data-m]').forEach(function (el) {
+    var y = el.dataset.y, m = parseInt(el.dataset.m, 10);
+    el.textContent = lang === 'en' ? MONTHS_EN[m] + ' ' + y : y + '年' + m + '月';
+  });
+
   var btn = document.getElementById('lang-toggle');
   if (btn) btn.textContent = lang === 'en' ? '繁中' : 'EN';
   document.documentElement.lang = lang === 'en' ? 'en' : 'zh-TW';

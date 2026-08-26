@@ -504,6 +504,19 @@ body { padding-top: var(--nav-h); }
 }
 .building-description p:last-child { margin-bottom: 0; }
 
+/* ── author byline (E-E-A-T: who made this, and how) */
+.byline {
+  padding: 1.25rem var(--pad) 0;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+.byline a { color: var(--accent); }
+.byline a:hover { text-decoration: underline; }
+.byline-sep { opacity: 0.5; margin: 0 0.35rem; }
+
 /* ── keyword lines folded into H1 (visually identical to the old sub <p>) */
 .hero-title-sub,
 .city-hero-title-sub {
