@@ -139,6 +139,14 @@ const TRANSLATIONS = {
     'guide.ber.agnes.p': 'The church is now a commercial gallery, so the interior is open only when an exhibition is on. Check before making the trip; the exterior is worth it either way.',
     'guide.ber.winter.h': 'Winter light',
     'guide.ber.winter.p': 'December daylight is short and flat, which suits this architecture but leaves few usable hours. Plan around roughly four in the afternoon, when it goes.',
+    'nav.map': 'Map',
+    'map.h1': 'Map',
+    'map.count': '7 cities · 88 locations',
+    'map.hint': 'Select a country',
+    'map.key.live': 'Published',
+    'map.key.pending': 'In preparation',
+    'map.panel.kicker': 'Where this project has been',
+    'map.panel.lead': 'Six countries photographed and published, three more shot and being prepared. Choose a highlighted country on the map to see what is there.',
     'section.gallery':   'Gallery',
     'section.about':     'About',
     'section.video':     'Video',
@@ -555,6 +563,14 @@ const TRANSLATIONS = {
     'guide.ber.agnes.p': '這座教堂現在是商業藝廊，只有在展覽期間才開放內部。出發前請先確認；不過外觀本身就值得走一趟。',
     'guide.ber.winter.h': '冬天的光',
     'guide.ber.winter.p': '十二月的白晝很短、光很平，適合這類建築，但可用的時數不多。大致以下午四點光線消失來安排行程。',
+    'nav.map': '地圖',
+    'map.h1': '地圖',
+    'map.count': '7 座城市 · 88 個地點',
+    'map.hint': '選擇一個國家',
+    'map.key.live': '已發布',
+    'map.key.pending': '整理中',
+    'map.panel.kicker': '這個計畫走過的地方',
+    'map.panel.lead': '六個國家已拍攝並發布，另有三個已拍攝、正在整理。點選地圖上標示的國家，看看那裡有什麼。',
     'section.gallery':   '相簿',
     'section.about':     '關於',
     'section.video':     '影片',
@@ -852,6 +868,9 @@ function applyLang(lang) {
   var btn = document.getElementById('lang-toggle');
   if (btn) btn.textContent = lang === 'en' ? '繁中' : 'EN';
   document.documentElement.lang = lang === 'en' ? 'en' : 'zh-TW';
+
+  /* let a page re-render content it builds in JS (e.g. the map panel) */
+  if (typeof window.onLangChange === 'function') window.onLangChange(lang);
 }
 
 function toggleLang() {
